@@ -1,0 +1,112 @@
+/* Block: cards-product
+   Source: RACV highlight cards (product action cards)
+   Blue background section with white product cards in a row */
+
+/* Section-level blue background */
+main .section.cards-product-container {
+  background-color: var(--link-color);
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* Card grid */
+.cards-product > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual card tile */
+.cards-product > ul > li {
+  background-color: #fff;
+  border: 1px solid rgb(223 223 223);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card image container */
+.cards-product .cards-product-card-image {
+  line-height: 0;
+}
+
+.cards-product > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.cards-product .cards-product-card-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Card title (bold paragraph) */
+.cards-product .cards-product-card-body p:first-child {
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--dark-color);
+  margin: 0 0 8px;
+}
+
+/* Card description */
+.cards-product .cards-product-card-body p:nth-child(2) {
+  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  color: rgb(68 68 68);
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+/* CTA link styled as pill button */
+.cards-product .cards-product-card-body p:last-child {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-body a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248 219 0);
+  color: var(--link-color);
+  border: 2px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: 10px 24px;
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  line-height: 22px;
+  min-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.cards-product .cards-product-card-body a:hover {
+  background-color: rgb(230 200 0);
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Desktop: 3-column row */
+@media (width >= 900px) {
+  .cards-product > ul {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .cards-product > ul > li {
+    flex: 1;
+    min-width: 0;
+  }
+}

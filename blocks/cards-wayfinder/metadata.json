@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-wayfinder",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-31T08:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.racv.com.au/",
+    "originPage": "homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "support-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + tile heading (clickable)",
+    "buttonCount": 0,
+    "imageCount": 5
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "support/help navigation tiles",
+      "icon-based wayfinder grids",
+      "quick link tile sections"
+    ],
+    "notSuitableFor": [
+      "content cards with descriptions",
+      "article listings",
+      "product cards with images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-31T08:10:00.000Z"
+  }
+}

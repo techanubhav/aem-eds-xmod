@@ -1,0 +1,123 @@
+/* Block: hero-homepage -- full-width hero with image and text content */
+
+/* Full-width wrapper override */
+.hero-homepage-wrapper {
+  max-width: unset !important;
+  padding: 0 !important;
+  background-color: var(--link-color);
+}
+
+/* Block container */
+.hero-homepage {
+  background-color: var(--link-color);
+  padding: 0 40px 24px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Image row */
+.hero-homepage > div:first-child > div {
+  margin-bottom: 24px;
+}
+
+.hero-homepage picture {
+  display: block;
+  line-height: 0;
+}
+
+.hero-homepage img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Content row */
+.hero-homepage > div:last-child > div {
+  padding: 0;
+}
+
+/* Heading -- source: 28px/40px mobile; weight 400; white */
+.hero-homepage h1 {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: var(--heading-font-family);
+  line-height: 40px;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+/* Paragraph text -- source: 18px; rgb(244, 244, 244) */
+.hero-homepage p {
+  font-size: var(--body-font-size-m);
+  font-family: var(--body-font-family);
+  line-height: 30px;
+  color: #f4f4f4;
+  margin: 0 0 24px;
+}
+
+/* CTA button -- source: yellow bg #f8db00, dark navy text, pill shape */
+.hero-homepage p.button-wrapper {
+  margin: 0;
+}
+
+.hero-homepage a:any-link {
+  background-color: #f8db00;
+  color: var(--dark-color);
+  border: 2px solid transparent;
+  border-radius: var(--button-border-radius);
+  padding: 9px 30px;
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.hero-homepage a:hover {
+  background-color: #e6c900;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+/* No-image fallback */
+.hero-homepage.no-image h1,
+.hero-homepage.no-image p {
+  color: #fff;
+}
+
+/* Desktop layout -- source: flex row, gap 32px, image right, content left */
+@media (width >= 900px) {
+  .hero-homepage {
+    flex-direction: row;
+    gap: 32px;
+    padding: 0 96px 32px;
+    max-width: 1248px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .hero-homepage > div:first-child {
+    flex: 1 1 50%;
+  }
+
+  .hero-homepage > div:last-child {
+    flex: 1 1 50%;
+    order: -1;
+  }
+
+  .hero-homepage > div:first-child > div {
+    margin-bottom: 0;
+  }
+
+  .hero-homepage > div:last-child > div {
+    padding: 48px 0;
+  }
+
+  .hero-homepage h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}

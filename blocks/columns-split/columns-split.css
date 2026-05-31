@@ -1,0 +1,117 @@
+/* Block: columns-split */
+
+.columns-split > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-split > div > div {
+  order: 1;
+}
+
+.columns-split > div > .columns-split-img-col {
+  order: 0;
+}
+
+.columns-split > div > .columns-split-img-col img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.columns-split > div > .columns-split-img-col picture {
+  display: block;
+  line-height: 0;
+}
+
+/* Text content cell */
+.columns-split > div > div:not(.columns-split-img-col) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.columns-split h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: 600;
+  font-family: var(--heading-font-family);
+  line-height: 1.4;
+  color: var(--dark-color);
+  margin: 0 0 8px;
+}
+
+.columns-split p {
+  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  line-height: 1.5;
+  color: rgb(68 68 68);
+  margin: 0 0 8px;
+}
+
+.columns-split ul {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.columns-split ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0 0 24px;
+  font-size: var(--body-font-size-m);
+  font-family: var(--body-font-family);
+  line-height: 1.5;
+  color: var(--dark-color);
+}
+
+.columns-split ul li::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  margin-top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Ccircle cx='16' cy='16' r='15' stroke='%230067f6' stroke-width='1.5'/%3E%3Cpolyline points='10 16 14 20 22 12' fill='none' stroke='%230067f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.columns-split ul li:last-child {
+  margin-bottom: 0;
+}
+
+.columns-split a:any-link {
+  color: var(--link-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-split > div {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .columns-split > div > div {
+    flex: 0 1 50%;
+    order: unset;
+  }
+
+  .columns-split > div > .columns-split-img-col {
+    order: unset;
+  }
+
+  .columns-split > div > div:not(.columns-split-img-col) {
+    padding: 48px;
+  }
+
+  .columns-split h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

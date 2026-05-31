@@ -1,0 +1,102 @@
+/* Block: cards-category
+   Category navigation cards with icon + title link.
+   Extracted values from source: flex-wrap layout, 32px gap, centered,
+   24px Poppins 600 title links in navy, 104x78 icon area. */
+
+.cards-category > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.cards-category > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-width: 280px;
+}
+
+/* Icon cell (first div) - placeholder area for illustration */
+.cards-category > ul > li .cards-category-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 78px;
+  flex-shrink: 0;
+}
+
+.cards-category > ul > li .cards-category-card-image img {
+  width: 104px;
+  height: 78px;
+  object-fit: contain;
+}
+
+/* Body cell - title link */
+.cards-category > ul > li .cards-category-card-body:last-child {
+  padding-left: 8px;
+}
+
+/* Empty first card-body (no image) collapses cleanly */
+.cards-category > ul > li .cards-category-card-body:first-child:empty {
+  display: none;
+}
+
+/* Reset EDS button styling - source shows plain text links */
+.cards-category .button-wrapper {
+  margin: 0;
+}
+
+.cards-category a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--dark-color);
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-decoration: none;
+  white-space: normal;
+  gap: 8px;
+}
+
+.cards-category a.button:any-link:hover {
+  background-color: transparent;
+  border: none;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Chevron arrow after link text */
+.cards-category a.button:any-link::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Responsive: mobile stacks 1 per row, tablet 2, desktop 3 */
+@media (width >= 600px) {
+  .cards-category > ul > li {
+    flex: 0 0 calc(50% - 16px);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-category > ul > li {
+    flex: 0 0 calc(33.333% - 22px);
+    min-width: 314px;
+  }
+}

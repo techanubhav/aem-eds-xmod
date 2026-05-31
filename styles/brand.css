@@ -1,0 +1,44 @@
+:root {
+  /* colors */
+  --background-color: #fff;
+  --text-color: #001657;
+  --link-color: #0067f6;
+  --link-hover-color: #0050c4;
+  --light-color: #f8f8f5;
+  --dark-color: #001657;
+  --blue-color: #f2f7ff;
+
+  /* fonts */
+  --heading-font-family: "Poppins", sans-serif;
+  --body-font-family: "Suisse Intl", -apple-system, blinkmacsystemfont, "Segoe UI", sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* spacing */
+  --section-padding: 48px 16px;
+  --nav-height: 64px;
+  --content-max-width: 1200px;
+  --button-border-radius: 48px;
+}
+
+@media (width >= 900px) {
+  :root {
+    --heading-font-size-xxl: 44px;
+    --heading-font-size-xl: 32px;
+    --heading-font-size-l: 28px;
+    --heading-font-size-m: 24px;
+    --heading-font-size-s: 20px;
+    --heading-font-size-xs: 18px;
+  }
+}

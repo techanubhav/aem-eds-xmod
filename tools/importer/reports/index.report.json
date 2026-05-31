@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.racv.com.au/",
+  "path": "index",
+  "timestamp": "2026-05-31T08:25:58.985Z",
+  "title": "RACV | Roadside Assist, Car Loans, Insurance & Travel",
+  "template": "homepage",
+  "blocks": [
+    "hero-homepage",
+    "cards-quicklinks",
+    "cards-category",
+    "columns-split",
+    "cards-product",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature",
+    "cards-article",
+    "cards-wayfinder"
+  ]
+}

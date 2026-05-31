@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-quicklinks",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-31T08:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.racv.com.au/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "quicklinks",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + text link",
+    "buttonCount": 0,
+    "imageCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "quick action link bars",
+      "icon-based navigation rows",
+      "service shortcut strips"
+    ],
+    "notSuitableFor": [
+      "content cards with descriptions",
+      "image-heavy card grids",
+      "article listings"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-31T08:10:00.000Z"
+  }
+}

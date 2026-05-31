@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-31T08:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.racv.com.au/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-action",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + dual CTAs",
+    "buttonCount": 2,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product/service highlight cards",
+      "feature cards with dual action buttons",
+      "promotional cards with images"
+    ],
+    "notSuitableFor": [
+      "article listings",
+      "simple icon-text cards",
+      "navigation cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-31T08:10:00.000Z"
+  }
+}

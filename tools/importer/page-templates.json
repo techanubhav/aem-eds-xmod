@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": ["https://www.racv.com.au/"],
+      "description": "RACV homepage with hero, navigation cards, and promotional content sections",
+      "blocks": [
+        {
+          "name": "hero-homepage",
+          "instances": [".herobanner.parent .cmp-homepage-banner"]
+        },
+        {
+          "name": "cards-quicklinks",
+          "instances": [".cmp-homepage-banner-bottom .cmp-list"]
+        },
+        {
+          "name": "cards-category",
+          "instances": [".productlisting.parent .cmp-productListing"]
+        },
+        {
+          "name": "columns-split",
+          "instances": [".splitpanel.parent .cmp-split-panel"]
+        },
+        {
+          "name": "cards-product",
+          "instances": [".highlightcards.parent .cmp-highlight-cards"]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [".icontext.parent"]
+        },
+        {
+          "name": "cards-article",
+          "instances": [".relatedinformation.parent .cmp-related-information"]
+        },
+        {
+          "name": "cards-wayfinder",
+          "instances": [".wayfinder.parent .cmp-wayfinder"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": ".herobanner.parent",
+          "style": null,
+          "blocks": ["hero-homepage", "cards-quicklinks"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Popular Products and Services",
+          "selector": ".productlisting.parent",
+          "style": "grey",
+          "blocks": ["cards-category"],
+          "defaultContent": ["h2.cmp-title__text"]
+        },
+        {
+          "id": "section-3",
+          "name": "RACV App Promo",
+          "selector": ".splitpanel.parent",
+          "style": null,
+          "blocks": ["columns-split"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Highlight Cards",
+          "selector": ".highlightcards.parent",
+          "style": null,
+          "blocks": ["cards-product"],
+          "defaultContent": ["h2.cmp-title__text.main-title"]
+        },
+        {
+          "id": "section-5",
+          "name": "RACV Difference",
+          "selector": "#container-3a020d5778",
+          "style": "blue",
+          "blocks": ["columns-feature"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Stay Up to Date",
+          "selector": ".relatedinformation.parent",
+          "style": null,
+          "blocks": ["cards-article"],
+          "defaultContent": ["#title-18f91eb4d3 h2", "#text-56edf84098 p"]
+        },
+        {
+          "id": "section-7",
+          "name": "Need Support",
+          "selector": ".wayfinder.parent",
+          "style": "grey",
+          "blocks": ["cards-wayfinder"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

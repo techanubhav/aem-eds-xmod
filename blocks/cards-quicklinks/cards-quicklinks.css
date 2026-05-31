@@ -1,0 +1,137 @@
+/* Block: cards-quicklinks
+ * Horizontal bar of icon + text quicklink items with vertical dividers.
+ * Extracted source: white card, border-radius 8px, box-shadow, flex row layout.
+ * Each item: flex column, icon 32x32 on top, text below, centered.
+ * Vertical dividers (1px solid #dfdfdf, 76px tall) between items.
+ */
+
+/* Wrapper: constrained width card with shadow, overlapping hero */
+.cards-quicklinks-wrapper {
+  max-width: var(--content-max-width) !important;
+  margin: -40px auto 0;
+  padding: 0 24px !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Block container: white card with shadow */
+.cards-quicklinks {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: rgb(20 20 20 / 8%) 0 6px 16px 0, rgb(20 20 20 / 6%) 0 1px 4px 0;
+  padding: 16px;
+}
+
+/* List reset and flex layout */
+.cards-quicklinks > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Each list item: flex column, centered */
+.cards-quicklinks > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 calc(33.333% - 16px);
+  padding: 8px 4px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  min-height: 108px;
+}
+
+/* Vertical dividers between items via ::after */
+.cards-quicklinks > ul > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 76px;
+  width: 0;
+  border-right: 1px solid rgb(223 223 223);
+}
+
+/* Icon cell */
+.cards-quicklinks .cards-quicklinks-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  margin: 0;
+}
+
+.cards-quicklinks .cards-quicklinks-card-image p {
+  margin: 0;
+  line-height: 0;
+}
+
+.cards-quicklinks .cards-quicklinks-card-image img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Text/link cell */
+.cards-quicklinks .cards-quicklinks-card-body {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.cards-quicklinks .cards-quicklinks-card-body p {
+  margin: 0;
+}
+
+.cards-quicklinks .cards-quicklinks-card-body a:any-link {
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.cards-quicklinks .cards-quicklinks-card-body a:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+/* Mobile: 2 rows of 3 */
+@media (width >= 600px) {
+  .cards-quicklinks > ul > li {
+    flex: 1 1 calc(33.333% - 16px);
+  }
+
+  /* Hide divider on items that end a row (3rd item) */
+  .cards-quicklinks > ul > li:nth-child(3)::after {
+    display: none;
+  }
+}
+
+/* Desktop: single row of 6 items */
+@media (width >= 900px) {
+  .cards-quicklinks-wrapper {
+    padding: 0 32px !important;
+  }
+
+  .cards-quicklinks > ul {
+    flex-wrap: nowrap;
+  }
+
+  .cards-quicklinks > ul > li {
+    flex: 0 1 100%;
+  }
+
+  /* Show all dividers except last */
+  .cards-quicklinks > ul > li:nth-child(3)::after {
+    display: block;
+  }
+}

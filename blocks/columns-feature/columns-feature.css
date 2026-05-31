@@ -1,0 +1,90 @@
+/* Block: columns-feature
+ * 3-column feature block with centered text (heading + description)
+ * Used in "The RACV difference" section with blue background
+ * Source: .icontext.parent within curved blue section on racv.com.au
+ *
+ * Extracted values:
+ *   Section bg: rgb(242, 247, 255) -> var(--blue-color)
+ *   Section padding: 64px 0
+ *   Container max-width: 1440px with 80px side padding
+ *   Item layout: flex column, text-align center, gap 8px
+ *   Icon: 140x105px, align-self center
+ *   H4: 20px, 600, Poppins, rgb(0,22,87), line-height 30px
+ *   P: 16px, Suisse Intl, line-height 24px, rgb(68,68,68)
+ *   Link: rgb(0,103,246), 16px, 500
+ */
+
+/* Section-level styles for default content in the columns-feature section */
+.section.columns-feature-container .default-content-wrapper {
+  text-align: center;
+}
+
+.section.columns-feature-container .default-content-wrapper h2 {
+  margin-bottom: 40px;
+}
+
+.columns-feature {
+  text-align: center;
+}
+
+.columns-feature > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.columns-feature > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.columns-feature h4 {
+  font-size: var(--heading-font-size-m);
+  font-weight: 600;
+  font-family: var(--heading-font-family);
+  line-height: 1.5;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.columns-feature p {
+  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  line-height: 1.5;
+  color: rgb(68 68 68);
+  margin: 8px 0 0;
+}
+
+.columns-feature img {
+  width: 140px;
+  height: 105px;
+  object-fit: contain;
+}
+
+/* Link styling within section (inline "Find out more" links) */
+.section.columns-feature-container .default-content-wrapper a {
+  color: var(--link-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.section.columns-feature-container .default-content-wrapper a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .columns-feature > div {
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .columns-feature > div > div {
+    flex: 1;
+    padding: 0 8px;
+  }
+}

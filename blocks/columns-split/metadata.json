@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-split",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-31T08:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.racv.com.au/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "split-panel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image column + text column with features",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "app promo split panels",
+      "product feature sections with image",
+      "two-column layouts with image and text"
+    ],
+    "notSuitableFor": [
+      "3-column layouts",
+      "text-only columns",
+      "icon-grid features"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-31T08:10:00.000Z"
+  }
+}
