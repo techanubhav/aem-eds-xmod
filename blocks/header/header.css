@@ -5,6 +5,8 @@ header .nav-wrapper {
   z-index: 2;
   position: fixed;
   box-shadow: 0 1px 6px rgb(0 0 0 / 10%);
+  height: var(--nav-height);
+  overflow: hidden;
 }
 
 header nav {
@@ -32,9 +34,16 @@ header nav[aria-expanded='true'] {
   min-height: 100dvh;
 }
 
+header:has(nav[aria-expanded='true']) .nav-wrapper {
+  height: auto;
+  overflow: visible;
+}
+
 @media (width >= 900px) {
   header .nav-wrapper {
     position: relative;
+    height: auto;
+    overflow: visible;
   }
 
   header nav {
@@ -49,6 +58,11 @@ header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
   }
+}
+
+/* Hide unclassed fragment sections */
+header nav > .section:not(.nav-brand, .nav-sections, .nav-tools) {
+  display: none;
 }
 
 header nav p {
